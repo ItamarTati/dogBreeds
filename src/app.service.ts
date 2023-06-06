@@ -5,7 +5,7 @@ import { join } from 'path';
 @Injectable()
 export class AppService {
   private readonly dogData = JSON.parse(
-    readFileSync(join(__dirname, 'dog-breeds.json'), 'utf8')
+    readFileSync(join(__dirname, '../static/dog-breeds.json'), 'utf8')
   );
 
   getDogBreeds(): string {
