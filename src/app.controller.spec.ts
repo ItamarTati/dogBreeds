@@ -25,27 +25,42 @@ describe('AppController', () => {
       const result = controller.getDogBreeds();
       const expectedBreeds = [
         {
+          id: 1,
           name: 'West Highland White Terrier',
           description:
             'The West Highland White Terrier, also known as the Westie, is a friendly, active, and outgoing breed. They are small but sturdy dogs with a lively and confident personality. Westies are known for their white, double-coated fur and their distinctive pointed ears. They make great companions and are often seen as affectionate family pets.',
         },
         {
+          id: 2,
           name: 'German Shepherd',
           description:
             'The German Shepherd is a loyal, courageous, and intelligent breed. They are well-known for their versatility and are commonly used as working dogs in various roles such as police, military, and search and rescue. German Shepherds are highly trainable and excel in tasks that require obedience and protection. They have a strong protective instinct and make excellent guard dogs.',
         },
         {
+          id: 3,
           name: 'Irish Wolfhound',
           description:
             'The Irish Wolfhound is an intelligent, friendly, and devoted breed. They are one of the tallest dog breeds and have a gentle and noble disposition. Irish Wolfhounds are known for their loyalty and make wonderful family pets. Despite their large size, they are generally calm and patient. They require regular exercise to stay healthy and thrive in a loving and nurturing environment.',
         },
         {
+          id: 4,
           name: 'Newfoundland Dog',
           description:
             'The Newfoundland Dog, often referred to as Newfie, is a docile, willful, and friendly breed. They are known for their massive size and strength, yet they have a sweet and gentle nature. Newfoundlands are excellent swimmers and have a natural instinct to save people from drowning. They are often regarded as gentle giants and are highly regarded for their loyalty and affectionate nature.',
         },
       ];
       expect(result).toEqual(expectedBreeds);
+    });
+
+    it('should return a specific dog breed by ID', () => {
+      const breedId = 2;
+      const result = controller.getDogBreedById(breedId);
+      const expectedBreed = {
+        id: 2,
+        name: 'German Shepherd',
+        description: 'The German Shepherd is a loyal, courageous, and intelligent breed. They are well-known for their versatility and are commonly used as working dogs in various roles such as police, military, and search and rescue. German Shepherds are highly trainable and excel in tasks that require obedience and protection. They have a strong protective instinct and make excellent guard dogs.',
+      };
+      expect(result).toEqual(expectedBreed);
     });
   });
 });
