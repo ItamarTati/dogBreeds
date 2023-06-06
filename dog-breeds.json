@@ -1,0 +1,28 @@
+{
+    "dogBreeds": [
+      {
+        "name": "Labrador Retriever",
+        "description": "Friendly, active, and outgoing"
+      },
+      {
+        "name": "German Shepherd",
+        "description": "Loyal, courageous, and intelligent"
+      },
+      {
+        "name": "Golden Retriever",
+        "description": "Intelligent, friendly, and devoted"
+      },
+      {
+        "name": "Bulldog",
+        "description": "Docile, willful, and friendly"
+      },
+      {
+        "name": "Poodle",
+        "description": "Intelligent, active, and alert"
+      },
+      {
+        "name": "Beagle",
+        "description": "Friendly, curious, and merry"
+      }
+    ]
+  }
